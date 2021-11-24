@@ -1,0 +1,49 @@
+{% extends 'app_principal/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">¡Hola Cap!</span>
+            <span class="section-heading-lower">Bienvenido</span>
+          </h2>
+          <p class="mb-0">Aquí podrás gestionar todos tus registros. </br>Consultar quienes son tus patrocinadores,
+            aliados, compañeros de equipo, personas salvadas, tus peores enemigos y tus próximas misiones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Heading -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-lower">CAPITAN AMERICA</span>
+        </h2>
+        <p class="mb-3"><span class="text-slider-items">Aventurero, artista, soldado, oficial de policía, agente de S.H.I.E.L.D, maestro, el pináculo
+          de la perfección humana. </br>El Capitán América.</span><strong class="text-slider"></strong></p>
+      </div>
+      <p></p>
+      <p></p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SZ2A1biUzUk" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!--<img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'app_principal/img/principal.jpg' %}"
+          alt="">-->
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

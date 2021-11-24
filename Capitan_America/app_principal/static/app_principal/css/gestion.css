@@ -1,0 +1,549 @@
+body {
+  font-family: 'Lora';
+  /*Difuminado de la pagina*/
+  background: linear-gradient(rgba(26, 28, 29, 0.65), rgba(24, 22, 22, 0.247)), url("../img/principal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+}
+
+p {
+  line-height: 1.75;
+}
+/*Texto final "Gestion de registros*/
+.text-faded {
+  color: rgb(243, 247, 241);
+}
+
+.site-heading {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.site-heading .site-heading-lower {
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
+}
+
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: .5rem;
+
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+
+.section-heading .section-heading-under {
+  display: block;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 300;
+  margin-top: .5rem;
+}
+.section-heading .text-slider-items{
+  display:none;
+}
+/*Inicio de cap, aventurero, blablabla pantalla pequena*/
+.bg-faded {
+  background-color: rgba(2, 14, 15, 0.527);
+  color: rgb(240, 243, 247);
+   
+}
+
+
+/*barra menu inicial*/
+#mainNav {
+  background-color: rgba(2, 14, 15, 0.527);
+  font-family: 'Raleway';
+  margin-top: 1rem;
+}
+
+/*Letra de la barra principal "Capitan america"*/
+#mainNav .navbar-brand {
+  color: #f6f8f4;
+}
+
+/*letra menu*/
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: rgb(242, 243, 234);
+  font-weight: 800;
+}
+
+/*Letra Home del menu*/
+#mainNav .navbar-nav .nav-item.active .nav-link {
+  color: #fafaf4;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+/*ni idea*/
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(223, 68, 21, 0.952);
+    text-decoration: underline;
+  }
+/*ni idea*/
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: #ee5711;
+    text-decoration: underline;
+  }
+}
+
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+}
+
+.intro {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .intro .intro-img {
+    width: 75%;
+    float: left;
+  }
+
+  /*Cuando se amplia el Capitan america,aventurero,blablabla cambia a este color*/
+  .intro .intro-text {
+    left: 600;
+    width: 60%;
+    margin-top: -1rem;
+    background-color: rgba(2, 14, 15, 0.527);
+    /*letra*/
+    color: rgb(244, 245, 247);
+    position: absolute;
+  }
+
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+}
+/*Fondo de bienvenida transparente*/
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgba(154, 163, 161, 0.199);
+}
+/*Cuadro Bienvenida Cap*/
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.575);
+  /*Letra*/
+  color: rgb(209, 204, 207);
+}
+
+
+/*borde de bienvenida*/
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(7, 6, 7, 0.74);
+}
+
+/*Cuadro principal no se mueve*/
+.cta .cta-inner-delete {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.575);
+  /*Letra*/
+  color: rgb(209, 204, 207);
+  
+}
+/*ni idea*/
+.cta .cta-innerv {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgb(10, 241, 211);
+}
+
+@media (min-width: 992px) {
+  .about-heading .about-heading-img {
+    position: relative;
+    z-index: 0;
+  }
+
+  .about-heading .about-heading-content {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  .list-hours {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+.address strong {
+  font-size: 1.2rem;
+}
+
+/*Barra final*/
+.footer {
+  background-color: rgba(2, 14, 15, 0.527);
+  margin-top: 4rem;
+
+}
+
+
+/*Fondo del fondo de bienvenida*/
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(212, 212, 210, 0.486);
+}
+
+
+
+.font-weight-light {
+  font-weight: 100 !important;
+}
+
+.mbtm {
+  padding-top: 5rem;
+}
+
+.mbt {
+  padding-top: 2rem;
+}
+
+.mbt1 {
+  padding-top: 1.25rem;
+}
+/*politica de privacidad bla bla bla*/
+a.link {
+  color: rgba(240, 247, 241, 0.7);
+}
+
+/*al seleccionar cookies, blablabla*/
+a.link:hover {
+  text-decoration: none;
+  color: rgb(5, 4, 31);
+}
+
+.section-content {
+  font-family: 'Lora' !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+ul.errorlist {
+  padding-top: .75rem;
+  font-style: italic;
+  color: red;
+}
+
+
+
+/*boton azul*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.login100-form-btn {
+  font-family: Ubuntu-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 42px;
+  border-radius: 21px;
+
+   
+  background: rgba(8,11,51,1);  
+  background: -webkit-linear-gradient(left, rgba(4,4,21,1), rgba(12,14,44,1), rgba(23,29,94,1), rgba(21,38,91,1), rgba(21,38,91,1), rgba(26,43,91,1), rgba(59,82,114,1), rgba(136,149,191,1));
+  background: -o-linear-gradient(left, rgba(4,4,21,1), rgba(12,14,44,1), rgba(23,29,94,1), rgba(21,38,91,1), rgba(21,38,91,1), rgba(26,43,91,1), rgba(59,82,114,1), rgba(136,149,191,1));
+  background: -moz-linear-gradient(left, rgba(4,4,21,1), rgba(12,14,44,1), rgba(23,29,94,1), rgba(21,38,91,1), rgba(21,38,91,1), rgba(26,43,91,1), rgba(59,82,114,1), rgba(136,149,191,1));
+  background: linear-gradient(left, rgba(4,4,21,1), rgba(12,14,44,1), rgba(23,29,94,1), rgba(21,38,91,1), rgba(21,38,91,1), rgba(26,43,91,1), rgba(59,82,114,1), rgba(136,149,191,1));
+  position: relative;
+  z-index: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #646262;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  background-color: transparent;
+}
+
+.login100-form-btn:hover:before {
+  opacity: 1;
+}
+
+/*boton rojo*/
+
+.container-delete-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  
+}
+.delete-form-btn {
+  font-family: Ubuntu-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 42px;
+  border-radius: 21px;
+
+   
+  background:  rgba(184,6,47,1);
+  background: -webkit-linear-gradient(left, rgba(184,6,47,1), rgba(133,8,37,1), rgba(51,4,12,1));
+  background: -o-linear-gradient(left, rgba(184,6,47,1), rgba(133,8,37,1), rgba(51,4,12,1));
+  background: -moz-linear-gradient(left, rgba(184,6,47,1), rgba(133,8,37,1), rgba(51,4,12,1));
+  background: linear-gradient(left, rgba(184,6,47,1), rgba(133,8,37,1), rgba(51,4,12,1));
+  position: relative;
+  z-index: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.delete-form-btn::before {
+  
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #646262;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.delete-form-btn:hover {
+  background-color: transparent;
+}
+
+.delete-form-btn:hover:before {
+  opacity: 1;
+}
+
+/*boton verde*/
+
+.container-save-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  
+}
+.save-form-btn {
+  font-family: Ubuntu-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 42px;
+  border-radius: 21px;
+
+   
+  background: rgba(171,222,17,1);
+  background: -webkit-linear-gradient(left, rgba(171,222,17,1), rgba(18,36,1,1));
+  background: -o-linear-gradient(left, rgba(171,222,17,1), rgba(18,36,1,1));
+  background: -moz-linear-gradient(left, rgba(171,222,17,1), rgba(18,36,1,1));
+  background: linear-gradient(left, rgba(171,222,17,1), rgba(18,36,1,1));
+  position: relative;
+  z-index: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.save-form-btn::before {
+  
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #646262;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.save-form-btn:hover {
+  background-color: transparent;
+}
+
+.save-form-btn:hover:before {
+  opacity: 1;
+}
+
+

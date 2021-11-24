@@ -1,0 +1,48 @@
+{% extends 'app_principal/base.html' %}
+{% load static %}
+
+{% block title %}
+Eliminar Enemigo
+{% endblock %}
+{% block content %}
+<form method="post">
+    <div class="panel-body">
+         <section class="page-section cta">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-9 mx-auto">
+                  <div class="cta-inner-delete text-center rounded">
+                    <h2 class="section-heading mb-1">
+                        <form method="post">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">
+                                    Eliminar enemigo
+                                    <p></p>
+                                </div>
+                                <div class="panel-body">
+                                    {% csrf_token %}
+                                    <div class="alert alert-success">
+                                        {{enemigo.alias_enemigo}}
+                                    </div>
+                                    <div class="container-login100-form-btn m-t-32">
+                                        <a href="{% url 'ListarEnemigos' %}" class="btn login100-form-btn">
+                                            <span class="fa fa-undo">
+                                                Regresar
+                                            </span>
+                                        </a>
+                                    <button type="submit" class="btn delete-form-btn">
+                                        <span class="fa fa-delete">
+                                            Eliminar
+                                        </span>
+                                    </button>
+                                    </div>
+                                </div>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+{% endblock %}

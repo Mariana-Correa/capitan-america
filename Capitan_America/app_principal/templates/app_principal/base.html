@@ -1,0 +1,114 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="C:\Users\Mariana Correa\OneDrive\Escritorio\Proyectos\Proyectos Django\Capitan_America\Capitan_America\app_principal\templates\app_principal">
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+    {% load static %}
+    <!-- Bootstrap -->
+    <link href="{% static 'app_principal/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <!-- Styles -->
+    <link href="{% static 'app_principal/css/gestion.css' %}" rel="stylesheet">
+    
+</head>
+
+<body>
+  
+  
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Capitán América - BD</span>
+  </h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Capitán América</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Abre y lo coloca en el menu-->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if request.path == '/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Home</a> 
+          </li>
+          <nav class="menu"> 
+            <li class="nav-item {% if request.path == '/listarUsuarios/' %} active {% endif %} px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarUsuarios' %}">Usuario</a>
+            </li>
+          <li class="nav-item {% if request.path == '/listarAliados/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarAliados' %}">Aliados</a>
+          </li>
+          <li class="nav-item {% if request.path == '/listarCompaneros/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarCompaneros' %}">Compañeros</a>
+          </li>
+         
+          <li class="nav-item {% if request.path == '/listarEnemigos/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text=expanded " href="{% url 'ListarEnemigos' %}">Enemigos</a>
+          </li>
+          <li class="nav-item {% if request.path == '/listarPersonas/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarPersonas' %}">Salvados</a>
+          </li>
+          <li class="nav-item {% if request.path == '/listarHechos/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarHechos' %}">Hechos</a>
+          </li>
+          
+          <li class="nav-item {% if request.path == '/listarMisiones/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarMisiones' %}">Misiones</a>
+          </li>
+          <li class="nav-item {% if request.path == '/listarEnemigos/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'ListarContratos' %}">Contratos</a>
+          </li>
+        </nav>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Contenido cambiante-->
+  {% block content %}
+  {% endblock %}
+  <!-- Footer -->
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0">
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </p>
+      <p class="m-0 mbt">
+        <a href="" class="link">Política de privacidad</a> ·
+        <a href="" class="link">Aviso legal</a> ·
+        <a href="" class="link">Cookies</a>
+      </p>
+      <p class="m-0 mbt1">&copy; Gestión de Registros - Capitán América 2020</p>
+    </div>
+  </footer>
+  <!-- Bootstrap -->
+  <script src="{% static 'app_principal/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'app_principal/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>

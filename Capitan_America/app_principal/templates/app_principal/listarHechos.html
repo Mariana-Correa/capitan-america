@@ -1,0 +1,87 @@
+{% extends 'app_principal/base.html' %}
+{% load static %}
+
+{% block title %}
+Listar Hechos
+{% endblock %}
+{% block content %}
+<p></p>
+<div class="container-login100-form-btn m-t-32">
+<a href="{% url 'CrearHechos' %}" class="btn login100-form-btn">
+    Agregar
+</a>
+</div>
+<p></p>
+{% if hechos %}
+<form method="post">
+    <div class="panel-body">
+         <section class="page-section cta">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-9 mx-auto">
+                  <div class="cta-inner-delete text-center rounded">
+                    <h2 class="section-heading mb-1">
+                        <form method="post">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">
+                                    <table class="table table-striped table-dark table-bordered">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Salvador</th>
+                                                <th scope="col">Salvado a</th>
+                                                <th scope="col">Lugar</th>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Descripción</th>
+                                                <th scope="col">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for hecho in hechos %}
+                                            <tr>
+                                                <td>{{hecho.id}}</td>
+                                                <td>{{hecho.usuario}}</td>
+                                                <td>{{hecho.persona}}</td>
+                                                <td>{{hecho.lugar_hecho}}</td>
+                                                <td>{{hecho.fecha_hecho}}</td>
+                                                <td>{{hecho.descripcion_hecho}}</td>
+                                                <td>
+                                               
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+     <a href="{% url 'EditarHechos' hecho.id %}" class="btn btn-primary">
+                    <span class="fa fa-edit">
+                        Editar
+                    </span>
+                </a>
+                <a href="{% url 'EliminarHechos' hecho.id %} " class="btn btn-danger">
+                    <span class="fa fa-trash">
+                        Eliminar
+                    </span>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner-delete text-center rounded">
+            <h2 class="section-heading mb-1">
+                No existen hechos registrados
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endif %}
+{% endblock %}

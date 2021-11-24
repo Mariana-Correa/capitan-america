@@ -1,0 +1,46 @@
+{% extends 'app_principal/base.html' %}
+{% load static %}
+
+{% block title %}
+Crear misiones
+{% endblock %}
+{% block content %}
+
+<form method="post">
+    <div class="panel-body">
+         <section class="page-section cta">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-9 mx-auto">
+                  <div class="cta-inner-delete text-center rounded">
+                    <h2 class="section-heading mb-1">
+                        <form method="post">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <p> </p>
+
+                                    <div class="container-login100-form-btn m-t-32">
+        
+                                        <a href="{% url 'ListarMisiones' %}" class="btn login100-form-btn">
+                                            <span class="fa fa-undo">
+                                                Regresar
+                                            </span>
+                                        </a>
+                                        <button type="submit" class="bbtn save-form-btn">
+                                            <span class="fa fa-save">
+                                                Guardar
+                                            </span>
+                                        </button>
+                                        </div>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+    </div>
+</form>
+{% endblock %}
